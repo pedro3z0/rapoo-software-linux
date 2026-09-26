@@ -1,0 +1,150 @@
+RapooDevice.dll: 32-bit, image base 0x6FD00000
+sections: .text, .data, .rdata, .eh_fram, .bss, .edata, .idata, .CRT, .tls, .rsrc, .reloc
+immediates: 0x6FD14820, 0x6FD14BE0, 0x6FD14C00, 0x6FD14660, 0x6FD14280, 0x6FD87420, 0x6FD0AF20, 0x6FD0AFA0
+decoded 689,765 instructions
+
+=== target 0x6FD14820 hit 1 @0x6FD0A6B0 (imm=0x6FD14820) ===
+   0x6FD0A6A3: mov      dword ptr [esp + 4], esi
+   0x6FD0A6A7: mov      eax, dword ptr [ebx + 0x3168]
+   0x6FD0A6AD: mov      dword ptr [esp], eax
+>> 0x6FD0A6B0: call     0x6fd14820
+   0x6FD0A6B5: cmp      eax, -1
+   0x6FD0A6B8: je       0x6fd0a861
+   0x6FD0A6BE: test     eax, eax
+
+=== target 0x6FD14820 hit 2 @0x6FD0ABE5 (imm=0x6FD14820) ===
+   0x6FD0ABD8: mov      dword ptr [esp + 4], eax
+   0x6FD0ABDC: mov      eax, dword ptr [ecx + 0x3164]
+   0x6FD0ABE2: mov      dword ptr [esp], eax
+>> 0x6FD0ABE5: call     0x6fd14820
+   0x6FD0ABEA: test     eax, eax
+   0x6FD0ABEC: setg     al
+   0x6FD0ABEF: add      esp, 0x1c
+
+=== target 0x6FD14820 hit 3 @0x6FD0AC25 (imm=0x6FD14820) ===
+   0x6FD0AC18: mov      dword ptr [esp + 4], eax
+   0x6FD0AC1C: mov      eax, dword ptr [ecx + 0x3164]
+   0x6FD0AC22: mov      dword ptr [esp], eax
+>> 0x6FD0AC25: call     0x6fd14820
+   0x6FD0AC2A: test     eax, eax
+   0x6FD0AC2C: setg     al
+   0x6FD0AC2F: add      esp, 0x1c
+
+=== target 0x6FD14820 hit 4 @0x6FD0AC65 (imm=0x6FD14820) ===
+   0x6FD0AC58: mov      dword ptr [esp + 4], eax
+   0x6FD0AC5C: mov      eax, dword ptr [ecx + 0x3164]
+   0x6FD0AC62: mov      dword ptr [esp], eax
+>> 0x6FD0AC65: call     0x6fd14820
+   0x6FD0AC6A: test     eax, eax
+   0x6FD0AC6C: setg     al
+   0x6FD0AC6F: add      esp, 0x1c
+
+=== target 0x6FD14820 hit 5 @0x6FD0B0AB (imm=0x6FD14820) ===
+   0x6FD0B09E: mov      eax, dword ptr [ebx + 0x3164]
+   0x6FD0B0A4: mov      dword ptr [esp + 4], esi
+   0x6FD0B0A8: mov      dword ptr [esp], eax
+>> 0x6FD0B0AB: call     0x6fd14820
+   0x6FD0B0B0: xor      edx, edx
+   0x6FD0B0B2: test     eax, eax
+   0x6FD0B0B4: jg       0x6fd0b0c2
+
+=== target 0x6FD14820 hit 6 @0x6FD0B15B (imm=0x6FD14820) ===
+   0x6FD0B14E: mov      dword ptr [esp + 0xc], eax
+   0x6FD0B152: mov      eax, dword ptr [ebx + 0x3164]
+   0x6FD0B158: mov      dword ptr [esp], eax
+>> 0x6FD0B15B: call     0x6fd14820
+   0x6FD0B160: xor      edx, edx
+   0x6FD0B162: test     eax, eax
+   0x6FD0B164: jg       0x6fd0b172
+
+=== target 0x6FD14820 hit 7 @0x6FD14A3A (imm=0x6FD14820) ===
+   0x6FD14A2E: mov      dword ptr [esp + 8], eax
+   0x6FD14A32: mov      eax, dword ptr [esp + 0x24]
+   0x6FD14A36: mov      dword ptr [esp + 4], eax
+>> 0x6FD14A3A: call     0x6fd14820
+   0x6FD14A3F: add      esp, 0x1c
+   0x6FD14A42: ret      
+   0x6FD14A43: lea      esi, [esi]
+
+=== target 0x6FD14BE0 hit 1 @0x6FD0B000 (imm=0x6FD14BE0) ===
+   0x6FD0AFF5: mov      dword ptr [esp + 8], ebp
+   0x6FD0AFF9: mov      dword ptr [esp + 4], edi
+   0x6FD0AFFD: mov      dword ptr [esp], eax
+>> 0x6FD0B000: call     0x6fd14be0
+   0x6FD0B005: xor      edx, edx
+   0x6FD0B007: test     eax, eax
+   0x6FD0B009: jg       0x6fd0b020
+
+=== target 0x6FD14660 hit 1 @0x6FD0AB67 (imm=0x6FD14660) ===
+   0x6FD0AB5C: mov      dword ptr [esp + 8], ebx
+   0x6FD0AB60: mov      dword ptr [esp + 4], edi
+   0x6FD0AB64: mov      dword ptr [esp], esi
+>> 0x6FD0AB67: call     0x6fd14660
+   0x6FD0AB6C: sar      eax, 0x1f
+   0x6FD0AB6F: add      esp, 0x60
+   0x6FD0AB72: pop      ebx
+
+=== target 0x6FD14660 hit 2 @0x6FD0ABA3 (imm=0x6FD14660) ===
+   0x6FD0AB97: mov      dword ptr [esp + 8], eax
+   0x6FD0AB9B: mov      eax, dword ptr [esp + 0x20]
+   0x6FD0AB9F: mov      dword ptr [esp + 4], eax
+>> 0x6FD0ABA3: call     0x6fd14660
+   0x6FD0ABA8: sar      eax, 0x1f
+   0x6FD0ABAB: add      esp, 0x1c
+   0x6FD0ABAE: ret      8
+
+=== target 0x6FD14280 hit 1 @0x6FD0E33F (imm=0x6FD14280) ===
+   0x6FD0E337: je       0x6fd0e390
+   0x6FD0E339: mov      eax, dword ptr [ebp - 0x30]
+   0x6FD0E33C: mov      dword ptr [esp], eax
+>> 0x6FD0E33F: call     0x6fd14280
+   0x6FD0E344: mov      edx, eax
+   0x6FD0E346: mov      dword ptr [ebx + 0x3164], eax
+   0x6FD0E34C: mov      eax, dword ptr [ebp - 0x30]
+
+=== target 0x6FD14280 hit 2 @0x6FD0E48F (imm=0x6FD14280) ===
+   0x6FD0E487: je       0x6fd0e4d0
+   0x6FD0E489: mov      eax, dword ptr [ebp - 0x30]
+   0x6FD0E48C: mov      dword ptr [esp], eax
+>> 0x6FD0E48F: call     0x6fd14280
+   0x6FD0E494: mov      edx, dword ptr [ebp - 0x30]
+   0x6FD0E497: mov      dword ptr [ebx + 0x3168], eax
+   0x6FD0E49D: cmp      edx, edi
+
+=== target 0x6FD14280 hit 3 @0x6FD0E67F (imm=0x6FD14280) ===
+   0x6FD0E677: je       0x6fd0e6c0
+   0x6FD0E679: mov      eax, dword ptr [ebp - 0x30]
+   0x6FD0E67C: mov      dword ptr [esp], eax
+>> 0x6FD0E67F: call     0x6fd14280
+   0x6FD0E684: mov      edx, dword ptr [ebp - 0x30]
+   0x6FD0E687: mov      dword ptr [ebx + 0x3168], eax
+   0x6FD0E68D: cmp      edx, edi
+
+=== target 0x6FD14280 hit 4 @0x6FD0E829 (imm=0x6FD14280) ===
+   0x6FD0E81D: je       0x6fd0e973
+   0x6FD0E823: mov      eax, dword ptr [ebp - 0x30]
+   0x6FD0E826: mov      dword ptr [esp], eax
+>> 0x6FD0E829: call     0x6fd14280
+   0x6FD0E82E: mov      edx, dword ptr [ebp - 0x30]
+   0x6FD0E831: lea      ecx, [ebp - 0x28]
+   0x6FD0E834: mov      dword ptr [ebx + 0x3164], eax
+
+=== target 0x6FD14280 hit 5 @0x6FD0E8C9 (imm=0x6FD14280) ===
+   0x6FD0E8BD: je       0x6fd0e991
+   0x6FD0E8C3: mov      eax, dword ptr [ebp - 0x30]
+   0x6FD0E8C6: mov      dword ptr [esp], eax
+>> 0x6FD0E8C9: call     0x6fd14280
+   0x6FD0E8CE: mov      dword ptr [ebx + 0x3168], eax
+   0x6FD0E8D4: mov      eax, dword ptr [ebp - 0x30]
+   0x6FD0E8D7: lea      edi, [ebp - 0x28]
+
+=== target 0x6FD14280 hit 6 @0x6FD1461F (imm=0x6FD14280) ===
+   0x6FD14618: test     eax, eax
+   0x6FD1461A: je       0x6fd14630
+   0x6FD1461C: mov      dword ptr [esp], eax
+>> 0x6FD1461F: call     0x6fd14280
+   0x6FD14624: mov      ebx, eax
+   0x6FD14626: jmp      0x6fd14641
+   0x6FD14628: nop      
+
+total refs: 16

@@ -1,0 +1,1191 @@
+[
+  {
+    "model": "Ace 68 Turbo",
+    "pids": [
+      12326
+    ],
+    "mcu": "",
+    "sensor": "",
+    "driver": "GCOME_AP",
+    "dongle": "",
+    "battery": 0
+  },
+  {
+    "model": "A83 Air",
+    "pids": [
+      18452,
+      6420
+    ],
+    "mcu": "Telink",
+    "sensor": "",
+    "driver": "TelinkKeyboard",
+    "dongle": "Dongle_Telink",
+    "battery": 0
+  },
+  {
+    "model": "ESK800-75RT",
+    "pids": [
+      22341
+    ],
+    "mcu": "",
+    "sensor": "",
+    "driver": "OHID",
+    "dongle": "",
+    "battery": 0
+  },
+  {
+    "model": "ESK900-75RT",
+    "pids": [
+      18474
+    ],
+    "mcu": "",
+    "sensor": "",
+    "driver": "CH585M",
+    "dongle": "",
+    "battery": 0
+  },
+  {
+    "model": "ESK900-83RT",
+    "pids": [
+      18459
+    ],
+    "mcu": "",
+    "sensor": "",
+    "driver": "CH585M",
+    "dongle": "",
+    "battery": 0
+  },
+  {
+    "model": "ESK900-98RT",
+    "pids": [
+      18458
+    ],
+    "mcu": "",
+    "sensor": "",
+    "driver": "CH585M",
+    "dongle": "",
+    "battery": 0
+  },
+  {
+    "model": "ESM612ACE",
+    "pids": [
+      17997
+    ],
+    "mcu": "N54L05",
+    "sensor": "PAW3955U",
+    "driver": "VT_nrf54L",
+    "dongle": "",
+    "battery": 800
+  },
+  {
+    "model": "ESM612MAX",
+    "pids": [
+      18049
+    ],
+    "mcu": "N54L05",
+    "sensor": "PAW3950U",
+    "driver": "VT_nrf54L",
+    "dongle": "",
+    "battery": 800
+  },
+  {
+    "model": "ESM612PRO",
+    "pids": [
+      17969
+    ],
+    "mcu": "N54L05",
+    "sensor": "PAW3398",
+    "driver": "VT_nrf54L",
+    "dongle": "",
+    "battery": 800
+  },
+  {
+    "model": "ESM622MAX",
+    "pids": [
+      17975
+    ],
+    "mcu": "N54L05",
+    "sensor": "PAW3950U",
+    "driver": "VT_nrf54L",
+    "dongle": "",
+    "battery": 800
+  },
+  {
+    "model": "ESM622PRO",
+    "pids": [
+      17970
+    ],
+    "mcu": "N54L05",
+    "sensor": "PAW3398",
+    "driver": "VT_nrf54L",
+    "dongle": "",
+    "battery": 800
+  },
+  {
+    "model": "ESM652PRO",
+    "pids": [
+      17971
+    ],
+    "mcu": "N54L05",
+    "sensor": "PAW3398",
+    "driver": "VT_nrf54L",
+    "dongle": "",
+    "battery": 800
+  },
+  {
+    "model": "ESM672MAX",
+    "pids": [
+      17984
+    ],
+    "mcu": "N54L05",
+    "sensor": "PAW3950U",
+    "driver": "VT_nrf54L",
+    "dongle": "",
+    "battery": 800
+  },
+  {
+    "model": "ESM672PRO",
+    "pids": [
+      17973
+    ],
+    "mcu": "N54L05",
+    "sensor": "PAW3398",
+    "driver": "VT_nrf54L",
+    "dongle": "",
+    "battery": 800
+  },
+  {
+    "model": "ESPR5",
+    "pids": [],
+    "mcu": "",
+    "sensor": "",
+    "driver": "VT_nrf54L_Base",
+    "dongle": "",
+    "battery": 0
+  },
+  {
+    "model": "ESPR7",
+    "pids": [],
+    "mcu": "",
+    "sensor": "",
+    "driver": "VT_nrf54L_Base",
+    "dongle": "",
+    "battery": 0
+  },
+  {
+    "model": "ESPR7PRO",
+    "pids": [],
+    "mcu": "",
+    "sensor": "",
+    "driver": "VT_nrf54L_Base",
+    "dongle": "",
+    "battery": 0
+  },
+  {
+    "model": "ESPR8",
+    "pids": [],
+    "mcu": "",
+    "sensor": "",
+    "driver": "VT_nrf54L_Base",
+    "dongle": "",
+    "battery": 0
+  },
+  {
+    "model": "ESPR8PRO",
+    "pids": [],
+    "mcu": "",
+    "sensor": "",
+    "driver": "VT_nrf54L_Base",
+    "dongle": "",
+    "battery": 0
+  },
+  {
+    "model": "P5 PLUS",
+    "pids": [],
+    "mcu": "",
+    "sensor": "",
+    "driver": "Telink_Base",
+    "dongle": "",
+    "battery": 0
+  },
+  {
+    "model": "P6 PLUS",
+    "pids": [
+      18439,
+      6407
+    ],
+    "mcu": "Telink",
+    "sensor": "",
+    "driver": "Telink_Base",
+    "dongle": "Dongle_Telink",
+    "battery": 0
+  },
+  {
+    "model": "V700diy-75",
+    "pids": [
+      18439,
+      6407
+    ],
+    "mcu": "Telink",
+    "sensor": "",
+    "driver": "TelinkKeyboard",
+    "dongle": "Dongle_Telink",
+    "battery": 0
+  },
+  {
+    "model": "V700diy-87",
+    "pids": [
+      18438,
+      6406
+    ],
+    "mcu": "Telink",
+    "sensor": "",
+    "driver": "TelinkKeyboard",
+    "dongle": "Dongle_Telink",
+    "battery": 0
+  },
+  {
+    "model": "V700diy-98",
+    "pids": [
+      18468,
+      6436
+    ],
+    "mcu": "Telink",
+    "sensor": "",
+    "driver": "TelinkKeyboard",
+    "dongle": "Dongle_Telink",
+    "battery": 0
+  },
+  {
+    "model": "V700diy-98",
+    "pids": [
+      18437,
+      6405
+    ],
+    "mcu": "Telink",
+    "sensor": "",
+    "driver": "TelinkKeyboard",
+    "dongle": "Dongle_Telink",
+    "battery": 0
+  },
+  {
+    "model": "VPR8 RT MASTER",
+    "pids": [],
+    "mcu": "",
+    "sensor": "",
+    "driver": "VT_nrf54L_Base",
+    "dongle": "",
+    "battery": 0
+  },
+  {
+    "model": "VPR8 PLUS",
+    "pids": [
+      17994,
+      5194
+    ],
+    "mcu": "",
+    "sensor": "",
+    "driver": "VT_nrf54L_Base",
+    "dongle": "Dongle_NordicH20",
+    "battery": 0
+  },
+  {
+    "model": "VT0 MAX MASTER",
+    "pids": [
+      17994,
+      5194
+    ],
+    "mcu": "N54H20",
+    "sensor": "PAW3950U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicH20",
+    "battery": 800
+  },
+  {
+    "model": "VT0 MAX",
+    "pids": [
+      17952,
+      5152
+    ],
+    "mcu": "N54L15",
+    "sensor": "PAW3950U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicL5",
+    "battery": 800
+  },
+  {
+    "model": "VT0",
+    "pids": [
+      17936,
+      5136
+    ],
+    "mcu": "N54L15",
+    "sensor": "PAW3398",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicL5",
+    "battery": 800
+  },
+  {
+    "model": "VT0 Air MAX",
+    "pids": [
+      18081,
+      5281
+    ],
+    "mcu": "N54L15",
+    "sensor": "PAW3950U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicL5",
+    "battery": 300
+  },
+  {
+    "model": "VT1 MAX",
+    "pids": [
+      17988,
+      5188
+    ],
+    "mcu": "N54L15",
+    "sensor": "PAW3950U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicL5",
+    "battery": 800
+  },
+  {
+    "model": "VT1 SE",
+    "pids": [
+      18961,
+      6673
+    ],
+    "mcu": "CH584",
+    "sensor": "PAW3311",
+    "driver": "VT_CH584",
+    "dongle": "Dongle_CH591",
+    "battery": 300
+  },
+  {
+    "model": "VT1",
+    "pids": [
+      17941,
+      5141
+    ],
+    "mcu": "N54L15",
+    "sensor": "PAW3398",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicL5",
+    "battery": 800
+  },
+  {
+    "model": "VT1S MAX V2",
+    "pids": [
+      19210,
+      6922
+    ],
+    "mcu": "N54LM20",
+    "sensor": "PAW3955U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicLM20",
+    "battery": 800
+  },
+  {
+    "model": "VT1S V2",
+    "pids": [
+      18026,
+      5226
+    ],
+    "mcu": "N54L15",
+    "sensor": "PAW3950U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicL5",
+    "battery": 800
+  },
+  {
+    "model": "VT2 MAX MASTER V2",
+    "pids": [
+      18037,
+      5237
+    ],
+    "mcu": "N54H20",
+    "sensor": "PAW3955U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicH20",
+    "battery": 800
+  },
+  {
+    "model": "VT2 MAX V2",
+    "pids": [
+      19209,
+      6921
+    ],
+    "mcu": "N54LM20",
+    "sensor": "PAW3955U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicLM20",
+    "battery": 800
+  },
+  {
+    "model": "VT2 MAX",
+    "pids": [
+      17955,
+      5155
+    ],
+    "mcu": "N54L15",
+    "sensor": "PAW3950U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicL5",
+    "battery": 800
+  },
+  {
+    "model": "VT2 RT MASTER V2",
+    "pids": [
+      19233,
+      6945
+    ],
+    "mcu": "N54LM20",
+    "sensor": "PAW3955U",
+    "driver": "LM20RT",
+    "dongle": "Dongle_NordicLM20",
+    "battery": 300
+  },
+  {
+    "model": "VT2 RT V2",
+    "pids": [
+      19232,
+      6944
+    ],
+    "mcu": "N54LM20",
+    "sensor": "PAW3955U",
+    "driver": "LM20RT",
+    "dongle": "Dongle_NordicLM20",
+    "battery": 300
+  },
+  {
+    "model": "VT2 ULTRA V2",
+    "pids": [
+      18034,
+      5234
+    ],
+    "mcu": "TL3228C",
+    "sensor": "",
+    "driver": "Telink3228C_Mouse",
+    "dongle": "Dongle_Telink3228C",
+    "battery": 0
+  },
+  {
+    "model": "VT2 V2",
+    "pids": [
+      18024,
+      5224
+    ],
+    "mcu": "N54L15",
+    "sensor": "PAW3950U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicL5",
+    "battery": 800
+  },
+  {
+    "model": "VT2",
+    "pids": [
+      17954,
+      5154
+    ],
+    "mcu": "N54L15",
+    "sensor": "PAW3398",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicL5",
+    "battery": 800
+  },
+  {
+    "model": "VT2 Air MAX V2",
+    "pids": [
+      19218,
+      6930
+    ],
+    "mcu": "N54LM20",
+    "sensor": "PAW3955U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicLM20",
+    "battery": 300
+  },
+  {
+    "model": "VT2K MAX",
+    "pids": [
+      18084,
+      5284
+    ],
+    "mcu": "N54L15",
+    "sensor": "PAW3950U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicL15",
+    "battery": 800
+  },
+  {
+    "model": "VT2S MAX MASTER V2",
+    "pids": [
+      18038,
+      5238
+    ],
+    "mcu": "N54H20",
+    "sensor": "PAW3955U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicH20",
+    "battery": 800
+  },
+  {
+    "model": "VT2S MAX V2",
+    "pids": [
+      19204,
+      6916
+    ],
+    "mcu": "N54LM20",
+    "sensor": "PAW3955U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicLM20",
+    "battery": 800
+  },
+  {
+    "model": "VT2S V2",
+    "pids": [
+      18013,
+      5213
+    ],
+    "mcu": "N54L15",
+    "sensor": "PAW3950U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicL5",
+    "battery": 800
+  },
+  {
+    "model": "VT2S Air MAX V2",
+    "pids": [
+      19219,
+      6931
+    ],
+    "mcu": "N54LM20",
+    "sensor": "PAW3955U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicLM20",
+    "battery": 300
+  },
+  {
+    "model": "VT3 MAX MASTER V2",
+    "pids": [
+      18029,
+      5229
+    ],
+    "mcu": "N54H20",
+    "sensor": "PAW3955U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicH20",
+    "battery": 800
+  },
+  {
+    "model": "VT3 MAX V2",
+    "pids": [
+      19206,
+      6918
+    ],
+    "mcu": "N54LM20",
+    "sensor": "PAW3955U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicLM20",
+    "battery": 800
+  },
+  {
+    "model": "VT3 MAX",
+    "pids": [
+      17943,
+      5143
+    ],
+    "mcu": "N54L15",
+    "sensor": "PAW3950U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicL5",
+    "battery": 800
+  },
+  {
+    "model": "VT3 PRO V2",
+    "pids": [
+      18085,
+      5285
+    ],
+    "mcu": "N54L15",
+    "sensor": "PAW3955U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicL5",
+    "battery": 800
+  },
+  {
+    "model": "VT3 V2",
+    "pids": [
+      18018,
+      5218
+    ],
+    "mcu": "N54L15",
+    "sensor": "PAW3950U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicL5",
+    "battery": 800
+  },
+  {
+    "model": "VT3",
+    "pids": [
+      17938,
+      5138
+    ],
+    "mcu": "N54L15",
+    "sensor": "PAW3398",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicL5",
+    "battery": 800
+  },
+  {
+    "model": "VT3 Air MAX V2",
+    "pids": [
+      19212,
+      6924
+    ],
+    "mcu": "N54LM20",
+    "sensor": "PAW3955U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicLM20",
+    "battery": 300
+  },
+  {
+    "model": "VT3S MAX MASTER V2",
+    "pids": [
+      18030,
+      5230
+    ],
+    "mcu": "N54H20",
+    "sensor": "PAW3955U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicH20",
+    "battery": 800
+  },
+  {
+    "model": "VT3S MAX MASTER",
+    "pids": [
+      17995,
+      5195
+    ],
+    "mcu": "N54H20",
+    "sensor": "PAW3950U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicH20",
+    "battery": 800
+  },
+  {
+    "model": "VT3S MAX V2",
+    "pids": [
+      19207,
+      6919
+    ],
+    "mcu": "N54LM20",
+    "sensor": "PAW3955U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicLM20",
+    "battery": 800
+  },
+  {
+    "model": "VT3S MAX",
+    "pids": [
+      17953,
+      5153
+    ],
+    "mcu": "N54L15",
+    "sensor": "PAW3950U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicL5",
+    "battery": 800
+  },
+  {
+    "model": "VT3S PRO V2",
+    "pids": [
+      18086,
+      5286
+    ],
+    "mcu": "N54L15",
+    "sensor": "PAW3955U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicL5",
+    "battery": 800
+  },
+  {
+    "model": "VT3S V2",
+    "pids": [
+      18020,
+      5220
+    ],
+    "mcu": "N54L15",
+    "sensor": "PAW3950U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicL5",
+    "battery": 800
+  },
+  {
+    "model": "VT3S",
+    "pids": [
+      17937,
+      5137
+    ],
+    "mcu": "N54L15",
+    "sensor": "PAW3398",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicL5",
+    "battery": 800
+  },
+  {
+    "model": "VT3S Air MAX V2",
+    "pids": [
+      19213,
+      6925
+    ],
+    "mcu": "N54LM20",
+    "sensor": "PAW3955U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicLM20",
+    "battery": 300
+  },
+  {
+    "model": "VT3S Air Max",
+    "pids": [
+      18082,
+      5282
+    ],
+    "mcu": "N54L15",
+    "sensor": "PAW3950U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicL5",
+    "battery": 300
+  },
+  {
+    "model": "VT4 MAX MASTER V2",
+    "pids": [
+      18039,
+      5239
+    ],
+    "mcu": "N54H20",
+    "sensor": "PAW3955U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicH20",
+    "battery": 800
+  },
+  {
+    "model": "VT4 MAX V2",
+    "pids": [
+      19203,
+      6915
+    ],
+    "mcu": "N54LM20",
+    "sensor": "PAW3955U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicLM20",
+    "battery": 800
+  },
+  {
+    "model": "VT4 V2",
+    "pids": [
+      18011,
+      5211
+    ],
+    "mcu": "N54L15",
+    "sensor": "PAW3950U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicL5",
+    "battery": 800
+  },
+  {
+    "model": "VT4 Air MAX V2",
+    "pids": [
+      19220,
+      6932
+    ],
+    "mcu": "N54LM20",
+    "sensor": "PAW3955U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicLM20",
+    "battery": 300
+  },
+  {
+    "model": "VT6 MAX",
+    "pids": [
+      18002,
+      5202
+    ],
+    "mcu": "N54L15",
+    "sensor": "PAW3950U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicL5",
+    "battery": 800
+  },
+  {
+    "model": "VT6",
+    "pids": [
+      18001,
+      5201
+    ],
+    "mcu": "N54L15",
+    "sensor": "PAW3398",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicL5",
+    "battery": 800
+  },
+  {
+    "model": "VT68",
+    "pids": [
+      18482
+    ],
+    "mcu": "",
+    "sensor": "",
+    "driver": "GCOME_AP",
+    "dongle": "",
+    "battery": 0
+  },
+  {
+    "model": "VT7 MAX MASTER V2",
+    "pids": [
+      18032,
+      5232
+    ],
+    "mcu": "N54H20",
+    "sensor": "PAW3955U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicH20",
+    "battery": 800
+  },
+  {
+    "model": "VT7 MAX V2",
+    "pids": [
+      19205,
+      6917
+    ],
+    "mcu": "N54LM20",
+    "sensor": "PAW3955U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicLM20",
+    "battery": 800
+  },
+  {
+    "model": "VT7 MAX",
+    "pids": [
+      17942,
+      5142
+    ],
+    "mcu": "N54L15",
+    "sensor": "PAW3950U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicL5",
+    "battery": 800
+  },
+  {
+    "model": "VT7 PRO V2",
+    "pids": [
+      18087,
+      5287
+    ],
+    "mcu": "N54L15",
+    "sensor": "PAW3955U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicL5",
+    "battery": 800
+  },
+  {
+    "model": "VT7 SE",
+    "pids": [
+      18944,
+      6656
+    ],
+    "mcu": "CH584",
+    "sensor": "PAW3311",
+    "driver": "VT_CH584",
+    "dongle": "Dongle_CH591",
+    "battery": 300
+  },
+  {
+    "model": "VT7 V2",
+    "pids": [
+      18016,
+      5216
+    ],
+    "mcu": "N54L15",
+    "sensor": "PAW3950U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicL5",
+    "battery": 800
+  },
+  {
+    "model": "VT7",
+    "pids": [
+      17939,
+      5139
+    ],
+    "mcu": "N54L15",
+    "sensor": "PAW3398",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicL5",
+    "battery": 800
+  },
+  {
+    "model": "VT7 Air MAX V2",
+    "pids": [
+      19214,
+      6926
+    ],
+    "mcu": "N54LM20",
+    "sensor": "PAW3955U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicLM20",
+    "battery": 300
+  },
+  {
+    "model": "VT7S MAX MASTER V2",
+    "pids": [
+      18033,
+      5233
+    ],
+    "mcu": "N54H20",
+    "sensor": "PAW3955U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicH20",
+    "battery": 800
+  },
+  {
+    "model": "VT7S MAX V2",
+    "pids": [
+      19202,
+      6914
+    ],
+    "mcu": "N54LM20",
+    "sensor": "PAW3955U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicLM20",
+    "battery": 800
+  },
+  {
+    "model": "VT7S PRO V2",
+    "pids": [
+      18088,
+      5288
+    ],
+    "mcu": "N54L15",
+    "sensor": "PAW3955U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicL5",
+    "battery": 800
+  },
+  {
+    "model": "VT7S V2",
+    "pids": [
+      18009,
+      5209
+    ],
+    "mcu": "N54L15",
+    "sensor": "PAW3950U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicL5",
+    "battery": 800
+  },
+  {
+    "model": "VT7S Air MAX V2",
+    "pids": [
+      19215,
+      6927
+    ],
+    "mcu": "N54LM20",
+    "sensor": "PAW3955U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicLM20",
+    "battery": 300
+  },
+  {
+    "model": "VT8 MAX MASTER V2",
+    "pids": [
+      18040,
+      5240
+    ],
+    "mcu": "N54H20",
+    "sensor": "PAW3955U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicH20",
+    "battery": 800
+  },
+  {
+    "model": "VT8 MAX V2",
+    "pids": [
+      19211,
+      6923
+    ],
+    "mcu": "N54LM20",
+    "sensor": "PAW3955U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicLM20",
+    "battery": 800
+  },
+  {
+    "model": "VT8 V2",
+    "pids": [
+      18028,
+      5228
+    ],
+    "mcu": "N54L15",
+    "sensor": "PAW3950U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicL5",
+    "battery": 800
+  },
+  {
+    "model": "VT8 Air MAX V2",
+    "pids": [
+      19221,
+      6933
+    ],
+    "mcu": "N54LM20",
+    "sensor": "PAW3955U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicLM20",
+    "battery": 300
+  },
+  {
+    "model": "VT9 MAX MASTER V2",
+    "pids": [
+      18035,
+      5235
+    ],
+    "mcu": "N54H20",
+    "sensor": "PAW3955U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicH20",
+    "battery": 800
+  },
+  {
+    "model": "VT9 MAX V2",
+    "pids": [
+      19208,
+      6920
+    ],
+    "mcu": "N54LM20",
+    "sensor": "PAW3955U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicLM20",
+    "battery": 800
+  },
+  {
+    "model": "VT9 MAX",
+    "pids": [
+      17944,
+      5144
+    ],
+    "mcu": "N54L15",
+    "sensor": "PAW3950U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicL5",
+    "battery": 800
+  },
+  {
+    "model": "VT9 PRO V2",
+    "pids": [
+      18089,
+      5289
+    ],
+    "mcu": "N54L15",
+    "sensor": "PAW3955U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicL5",
+    "battery": 800
+  },
+  {
+    "model": "VT9 V2",
+    "pids": [
+      18022,
+      5222
+    ],
+    "mcu": "N54L15",
+    "sensor": "PAW3950U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicL5",
+    "battery": 800
+  },
+  {
+    "model": "VT9",
+    "pids": [
+      17940,
+      5140
+    ],
+    "mcu": "N54L15",
+    "sensor": "PAW3398",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicL5",
+    "battery": 800
+  },
+  {
+    "model": "VT9 Air MAX V2",
+    "pids": [
+      19216,
+      6928
+    ],
+    "mcu": "N54LM20",
+    "sensor": "PAW3955U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicLM20",
+    "battery": 300
+  },
+  {
+    "model": "VT9S MAX MASTER V2",
+    "pids": [
+      18036,
+      5236
+    ],
+    "mcu": "N54H20",
+    "sensor": "PAW3955U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicH20",
+    "battery": 800
+  },
+  {
+    "model": "VT9S MAX V2",
+    "pids": [
+      19201,
+      6913
+    ],
+    "mcu": "N54LM20",
+    "sensor": "PAW3955U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicLM20",
+    "battery": 800
+  },
+  {
+    "model": "VT9S PRO V2",
+    "pids": [
+      18090,
+      5290
+    ],
+    "mcu": "N54L15",
+    "sensor": "PAW3955U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicL5",
+    "battery": 800
+  },
+  {
+    "model": "VT9S V2",
+    "pids": [
+      18003,
+      5203
+    ],
+    "mcu": "N54L15",
+    "sensor": "PAW3950U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicL5",
+    "battery": 800
+  },
+  {
+    "model": "VT9S Air MAX V2",
+    "pids": [
+      19217,
+      6929
+    ],
+    "mcu": "N54LM20",
+    "sensor": "PAW3955U",
+    "driver": "VT_nrf54L",
+    "dongle": "Dongle_NordicLM20",
+    "battery": 300
+  }
+]

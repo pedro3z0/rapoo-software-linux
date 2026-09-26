@@ -1,0 +1,421 @@
+{
+  "installer": {
+    "path": "/run/media/pdr0ca/DISCO 2/Other/dev-projects/rapoo-software-linux/A HUB_Game_Win_V1.0.19.exe",
+    "size": 346504864,
+    "sha256": "ebf741e0aa0fbd480dd10870d982457c29521c7d8681b995f7ade4bc01c1ac01"
+  },
+  "region": {
+    "start": 25525248,
+    "end": 346494104,
+    "size": 320968856,
+    "meta_blob_size": 31490,
+    "meta_magic": "qres"
+  },
+  "updates_xml": {
+    "application_name": "A HUB",
+    "application_version": "1.0.19",
+    "declared_compressed_size": 320937219,
+    "declared_uncompressed_size": 480534711,
+    "downloadable_archives": [
+      "bearer.7z",
+      "default.7z",
+      "iconengines.7z",
+      "imageformats.7z",
+      "lib.7z",
+      "platforminputcontexts.7z",
+      "platforms.7z",
+      "qmltooling.7z",
+      "Qt.7z",
+      "QtCharts.7z",
+      "QtGraphicalEffects.7z",
+      "QtQml.7z",
+      "QtQuick.7z",
+      "QtQuick.2.7z",
+      "QtWinExtras.7z",
+      "resources.7z",
+      "styles.7z",
+      "translations.7z",
+      "virtualkeyboard.7z",
+      "content.7z"
+    ]
+  },
+  "archives": [
+    {
+      "index": 0,
+      "name": "bearer.7z",
+      "offset": 25556738,
+      "size": 38580,
+      "sha256": "5cd0a99544f1012f5cc5d56f848a6aff364f846048a0780d0d79b49e04b56b87",
+      "integrity_ok": true,
+      "integrity_summary": "Compressed: 38580",
+      "name_confidence": "positional+content",
+      "first_entries": [
+        "bearer/qgenericbearer.dll",
+        "bearer"
+      ],
+      "extracted": true
+    },
+    {
+      "index": 1,
+      "name": "default.7z",
+      "offset": 25595358,
+      "size": 4289554,
+      "sha256": "bce4b215f5acad0568892b33aba333d4bc118d121d284654a7ebf2e85835ecc5",
+      "integrity_ok": true,
+      "integrity_summary": "Compressed: 4289554",
+      "name_confidence": "positional",
+      "first_entries": [
+        "default/config.json",
+        "default/screenPicture/Logo.png",
+        "default/AudioDriver/VE5/VE5-1.0.17.exe",
+        "default/AudioDriver/VE3/DRIVER/rapoo_ve3.cat",
+        "default/AudioDriver/VE3/DRIVER/RAPOO_VE3.Inf",
+        "default/AudioDriver/VE3/DRIVER/x64/3E46C8A0.crt",
+        "default/AudioDriver/VE3/DRIVER/x64/RAPOO_VE3.sys",
+        "default/AudioDriver/VE3/APO/EasyApoInstall.exe"
+      ],
+      "extracted": true
+    },
+    {
+      "index": 2,
+      "name": "iconengines.7z",
+      "offset": 29884952,
+      "size": 26812,
+      "sha256": "6dbf0ec6a3efa89b29a5a79f436f50ba5799f9d773c87efb4717879df9bf9407",
+      "integrity_ok": true,
+      "integrity_summary": "Compressed: 26812",
+      "name_confidence": "positional+content",
+      "first_entries": [
+        "iconengines/qsvgicon.dll",
+        "iconengines"
+      ],
+      "extracted": true
+    },
+    {
+      "index": 3,
+      "name": "imageformats.7z",
+      "offset": 29911804,
+      "size": 523006,
+      "sha256": "ec0d461bce792ed76a17b2dd4bd2e0d61f7cd6e9f8474e9ad02165374d4bf4d0",
+      "integrity_ok": true,
+      "integrity_summary": "Compressed: 523006",
+      "name_confidence": "positional+content",
+      "first_entries": [
+        "imageformats/qgif.dll",
+        "imageformats/qicns.dll",
+        "imageformats/qico.dll",
+        "imageformats/qjpeg.dll",
+        "imageformats/qsvg.dll",
+        "imageformats/qtga.dll",
+        "imageformats/qtiff.dll",
+        "imageformats/qwbmp.dll"
+      ],
+      "extracted": true
+    },
+    {
+      "index": 4,
+      "name": "lib.7z",
+      "offset": 30434850,
+      "size": 95,
+      "sha256": "008154da816a2a04395fb9e82597088b4ebd5924e02b506505844f04ac9ba2e2",
+      "integrity_ok": true,
+      "integrity_summary": "Compressed: 95",
+      "name_confidence": "positional",
+      "first_entries": [
+        "lib"
+      ],
+      "extracted": true
+    },
+    {
+      "index": 5,
+      "name": "platforminputcontexts.7z",
+      "offset": 30434985,
+      "size": 25831,
+      "sha256": "80c24785270d927076ba42a14077e37da0f890d71d3a319fca2f9b95738f785d",
+      "integrity_ok": true,
+      "integrity_summary": "Compressed: 25831",
+      "name_confidence": "positional+content",
+      "first_entries": [
+        "platforminputcontexts/qtvirtualkeyboardplugin.dll",
+        "platforminputcontexts"
+      ],
+      "extracted": true
+    },
+    {
+      "index": 6,
+      "name": "platforms.7z",
+      "offset": 30460856,
+      "size": 853458,
+      "sha256": "46774bc42eb6f5705a2bc21a0873ca1be69b54fb57617a9b67a9a4cc70323f2f",
+      "integrity_ok": true,
+      "integrity_summary": "Compressed: 853458",
+      "name_confidence": "positional+content",
+      "first_entries": [
+        "platforms/qwindows.dll",
+        "platforms"
+      ],
+      "extracted": true
+    },
+    {
+      "index": 7,
+      "name": "qmltooling.7z",
+      "offset": 31314354,
+      "size": 268104,
+      "sha256": "a91dad08281dcb67282abb36a64d5e5cecb0387d24eef06f82f5a5feec7cb1cb",
+      "integrity_ok": true,
+      "integrity_summary": "Compressed: 268104",
+      "name_confidence": "positional+content",
+      "first_entries": [
+        "qmltooling/qmldbg_debugger.dll",
+        "qmltooling/qmldbg_inspector.dll",
+        "qmltooling/qmldbg_local.dll",
+        "qmltooling/qmldbg_messages.dll",
+        "qmltooling/qmldbg_native.dll",
+        "qmltooling/qmldbg_nativedebugger.dll",
+        "qmltooling/qmldbg_preview.dll",
+        "qmltooling/qmldbg_profiler.dll"
+      ],
+      "extracted": true
+    },
+    {
+      "index": 8,
+      "name": "Qt.7z",
+      "offset": 31582498,
+      "size": 187556,
+      "sha256": "f10413a98a29f3fc5d3fe8e9e216bebc41d391585dca9200e1b415b4087d97f6",
+      "integrity_ok": true,
+      "integrity_summary": "Compressed: 187556",
+      "name_confidence": "positional",
+      "first_entries": [
+        "Qt/test/qtestroot/plugins.qmltypes",
+        "Qt/test/qtestroot/qmldir",
+        "Qt/labs/settings/plugins.qmltypes",
+        "Qt/labs/settings/qmldir",
+        "Qt/labs/settings/qmlsettingsplugin.dll",
+        "Qt/labs/platform/plugins.qmltypes",
+        "Qt/labs/platform/qmldir",
+        "Qt/labs/platform/qtlabsplatformplugin.dll"
+      ],
+      "extracted": true
+    },
+    {
+      "index": 9,
+      "name": "QtCharts.7z",
+      "offset": 31770094,
+      "size": 173876,
+      "sha256": "922a5d43442c5de580541cfda8454b0caac9beac75d3904cd0b71017ab15c20a",
+      "integrity_ok": true,
+      "integrity_summary": "Compressed: 173876",
+      "name_confidence": "positional",
+      "first_entries": [
+        "QtCharts/plugins.qmltypes",
+        "QtCharts/qmldir",
+        "QtCharts/qtchartsqml2.dll",
+        "QtCharts/designer/ChartViewSpecifics.qml",
+        "QtCharts/designer/qtcharts.metainfo",
+        "QtCharts/designer/images/areaseries-chart-icon.png",
+        "QtCharts/designer/images/areaseries-chart-icon16.png",
+        "QtCharts/designer/images/areaseries-polar-icon.png"
+      ],
+      "extracted": true
+    },
+    {
+      "index": 10,
+      "name": "QtGraphicalEffects.7z",
+      "offset": 31944010,
+      "size": 90839,
+      "sha256": "5451eaaf78150b2f06dceacdc58d95e91800d02016e0a39d304e6cd78bd93679",
+      "integrity_ok": true,
+      "integrity_summary": "Compressed: 90839",
+      "name_confidence": "positional",
+      "first_entries": [
+        "QtGraphicalEffects/Blend.qml",
+        "QtGraphicalEffects/BrightnessContrast.qml",
+        "QtGraphicalEffects/Colorize.qml",
+        "QtGraphicalEffects/ColorOverlay.qml",
+        "QtGraphicalEffects/ConicalGradient.qml",
+        "QtGraphicalEffects/Desaturate.qml",
+        "QtGraphicalEffects/DirectionalBlur.qml",
+        "QtGraphicalEffects/Displace.qml"
+      ],
+      "extracted": true
+    },
+    {
+      "index": 11,
+      "name": "QtQml.7z",
+      "offset": 32034889,
+      "size": 67834,
+      "sha256": "ba319503ee60c907fdd2c77ac96420533dc43639924ed12ce54cde223e03f4fd",
+      "integrity_ok": true,
+      "integrity_summary": "Compressed: 67834",
+      "name_confidence": "positional",
+      "first_entries": [
+        "QtQml/plugins.qmltypes",
+        "QtQml/qmldir",
+        "QtQml/qmlplugin.dll",
+        "QtQml/WorkerScript.2/plugins.qmltypes",
+        "QtQml/WorkerScript.2/qmldir",
+        "QtQml/WorkerScript.2/workerscriptplugin.dll",
+        "QtQml/StateMachine/plugins.qmltypes",
+        "QtQml/StateMachine/qmldir"
+      ],
+      "extracted": true
+    },
+    {
+      "index": 12,
+      "name": "QtQuick.7z",
+      "offset": 32102763,
+      "size": 2246128,
+      "sha256": "f6708fc1f887bc87115888dcefc4becd06f61c98e2d8eb51b3265262562f2216",
+      "integrity_ok": true,
+      "integrity_summary": "Compressed: 2246128",
+      "name_confidence": "positional",
+      "first_entries": [
+        "QtQuick/Window.2/plugins.qmltypes",
+        "QtQuick/Window.2/qmldir",
+        "QtQuick/Window.2/windowplugin.dll",
+        "QtQuick/Templates.2/plugins.qmltypes",
+        "QtQuick/Templates.2/qmldir",
+        "QtQuick/Templates.2/qtquicktemplates2plugin.dll",
+        "QtQuick/Shapes/plugins.qmltypes",
+        "QtQuick/Shapes/qmldir"
+      ],
+      "extracted": true
+    },
+    {
+      "index": 13,
+      "name": "QtQuick.2.7z",
+      "offset": 34348931,
+      "size": 34248,
+      "sha256": "8a75daaf20636c4d54ad9c190f660b9099f876f5ed3dc02a680c1728388a0eb4",
+      "integrity_ok": true,
+      "integrity_summary": "Compressed: 34248",
+      "name_confidence": "positional",
+      "first_entries": [
+        "QtQuick.2/plugins.qmltypes",
+        "QtQuick.2/qmldir",
+        "QtQuick.2/qtquick2plugin.dll",
+        "QtQuick.2"
+      ],
+      "extracted": true
+    },
+    {
+      "index": 14,
+      "name": "QtWinExtras.7z",
+      "offset": 34383219,
+      "size": 52443,
+      "sha256": "289577148665d5a933e8c9abbc82e7ef0d6515ca2e825a1fe427fdab891aa323",
+      "integrity_ok": true,
+      "integrity_summary": "Compressed: 52443",
+      "name_confidence": "positional",
+      "first_entries": [
+        "QtWinExtras/JumpListDestination.qml",
+        "QtWinExtras/JumpListLink.qml",
+        "QtWinExtras/JumpListSeparator.qml",
+        "QtWinExtras/plugins.qmltypes",
+        "QtWinExtras/qmldir",
+        "QtWinExtras/qml_winextras.dll",
+        "QtWinExtras"
+      ],
+      "extracted": true
+    },
+    {
+      "index": 15,
+      "name": "resources.7z",
+      "offset": 34435702,
+      "size": 107,
+      "sha256": "db84de67610418efb2c2ef3f15850b319be28aadb925061defdcaba3857a1ea5",
+      "integrity_ok": true,
+      "integrity_summary": "Compressed: 107",
+      "name_confidence": "positional",
+      "first_entries": [
+        "resources"
+      ],
+      "extracted": true
+    },
+    {
+      "index": 16,
+      "name": "styles.7z",
+      "offset": 34435849,
+      "size": 89257,
+      "sha256": "3d50f2f63609e9c8b2c51267f20b2ccfda13bb11f4bdabc72eaa8773505a47d1",
+      "integrity_ok": true,
+      "integrity_summary": "Compressed: 89257",
+      "name_confidence": "positional+content",
+      "first_entries": [
+        "styles/qwindowsvistastyle.dll",
+        "styles"
+      ],
+      "extracted": true
+    },
+    {
+      "index": 17,
+      "name": "translations.7z",
+      "offset": 34525146,
+      "size": 90017,
+      "sha256": "f3005eca98a32eda44c33eed800b341127a632eb4780cfb89ab4fbe35f33859e",
+      "integrity_ok": true,
+      "integrity_summary": "Compressed: 90017",
+      "name_confidence": "positional+content",
+      "first_entries": [
+        "translations/de_DE.qm",
+        "translations/en_US.qm",
+        "translations/fr_FR.qm",
+        "translations/ja_JP.qm",
+        "translations/ko_KR.qm",
+        "translations/ru_RU.qm",
+        "translations/zh_CN.qm",
+        "translations/zh_SG.qm"
+      ],
+      "extracted": true
+    },
+    {
+      "index": 18,
+      "name": "virtualkeyboard.7z",
+      "offset": 34615203,
+      "size": 1613804,
+      "sha256": "20182337f3e1e0a320e78e76e2b6b91e0794ae5a42bf895c1887ac2e9f2719dc",
+      "integrity_ok": true,
+      "integrity_summary": "Compressed: 1613804",
+      "name_confidence": "positional+content",
+      "first_entries": [
+        "virtualkeyboard/qtvirtualkeyboard_hangul.dll",
+        "virtualkeyboard/qtvirtualkeyboard_openwnn.dll",
+        "virtualkeyboard/qtvirtualkeyboard_pinyin.dll",
+        "virtualkeyboard/qtvirtualkeyboard_tcime.dll",
+        "virtualkeyboard/qtvirtualkeyboard_thai.dll",
+        "virtualkeyboard"
+      ],
+      "extracted": true
+    },
+    {
+      "index": 19,
+      "name": "content.7z",
+      "offset": 36229047,
+      "size": 310264870,
+      "sha256": "1bf5c85015a34eca8d96fc3d5ff2cb46b17adc32ee669fb31dcce01ba834171f",
+      "integrity_ok": true,
+      "integrity_summary": "Compressed: 310264870",
+      "name_confidence": "positional",
+      "first_entries": [
+        "A HUB.exe",
+        "code_2M.bin",
+        "com.rapoo.game.icns",
+        "com.rapoo.game.ico",
+        "com.rapoo.office.icns",
+        "com.rapoo.office.ico",
+        "com.rapoo.rapoodriver.icns",
+        "com.rapoo.rapoodriver.ico"
+      ],
+      "extracted": true
+    }
+  ],
+  "warnings": [],
+  "totals": {
+    "archives": 20,
+    "archives_integrity_ok": 20,
+    "carved_bytes": 320936419,
+    "declared_compressed_size": 320937219,
+    "declared_size_delta": -800
+  }
+}

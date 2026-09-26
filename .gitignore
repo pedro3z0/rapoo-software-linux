@@ -1,0 +1,36 @@
+# =============================================================================
+# Rapoo Linux tools - git ignore rules
+# =============================================================================
+
+# Extracted proprietary payloads and large analysis artifacts. These are
+# derived from Rapoo's own Windows driver and MUST NOT be redistributed;
+# they stay local to each developer's machine.
+analysis/extracted/
+analysis/captures/
+analysis/backups/
+analysis/work/
+
+# Local scratch / logs
+*.log
+tmp/
+.scratch/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.uv/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# OS noise
+.DS_Store
+Thumbs.db
+
+# Original Windows driver installer: 346 MB proprietary binary. NEVER commit it.
+# It stays on disk as the read-only reference (hash-pinned in docs/ORIGINAL_ARTIFACT.md).
+A HUB_Game_Win_V1.0.19.exe
+A HUB_*.exe

@@ -1,0 +1,12 @@
+# Rapoo Gaming Devices (VID 0x24AE)
+# Allows unprivileged user access to Rapoo hidraw interfaces for WebHID and local tooling
+#
+# Install:
+#   sudo cp packaging/udev/99-rapoo.rules /etc/udev/rules.d/
+#   sudo udevadm control --reload-rules && sudo udevadm trigger
+
+# USB HID devices (wired mouse, 2.4GHz receiver dongle)
+SUBSYSTEM=="hidraw", ATTRS{idVendor}=="24ae", MODE="0666", TAG+="uaccess"
+
+# Bluetooth HID devices (bus type 0005)
+SUBSYSTEM=="hidraw", KERNELS=="0005:24ae:*", MODE="0666", TAG+="uaccess"
