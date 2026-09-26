@@ -1,6 +1,6 @@
 # Rapoo Linux
 
-Linux support for **Rapoo** gaming mice (primary target: **VT3 Air**,
+Linux support for **Rapoo** gaming mice (primary target: **VT0 Air Max**,
 dongle `24ae:14a1`) - a `udev` rule that unlocks Rapoo's **official web
 driver** on Linux, plus a reverse-engineered Python CLI for scripting,
 backups and diagnostics.
