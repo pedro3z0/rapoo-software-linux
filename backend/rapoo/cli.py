@@ -10,7 +10,7 @@ from pathlib import Path
 
 from .transport import enumerate_rapoo_endpoints
 from .device import RapooMouse
-from .device_registry import registry
+from .device_registry import registry, REPO_ROOT
 from .protocol import POLLING_RATE_LABELS, LABEL_TO_POLLING_RATE, CONN_WIRED
 
 
@@ -176,8 +176,9 @@ def cmd_set(args):
     try:
         mouse = RapooMouse()
         with mouse:
-            # Auto backup first
-            backup_path = Path("analysis/backups/auto_backup_latest.json")
+            # Auto backup first (anchored to the repo so `rapoo` works from
+            # any working directory)
+            backup_path = REPO_ROOT / "analysis" / "backups" / "auto_backup_latest.json"
             mouse.backup_to_file(backup_path)
 
             if args.stage is not None:

@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# `rapoo` - CLI for Rapoo gaming mice (Linux).
+#
+# Zero dependencies: runs with the system Python 3 straight from the repo.
+# install.sh symlinks this file into ~/.local/bin, so it is safe to invoke
+# via that symlink or from any working directory (it resolves its own real
+# location and puts the repo root on PYTHONPATH).
+set -euo pipefail
+
+HERE="$(cd "$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")" && pwd)"
+
+PY="${PYTHON:-python3}"
+if ! command -v "$PY" >/dev/null 2>&1; then
+    echo "rapoo: '$PY' not found - install Python 3.9+ first" >&2
+    exit 1
+fi
+
+export PYTHONPATH="$HERE${PYTHONPATH:+:$PYTHONPATH}"
+exec "$PY" -m backend.rapoo.cli "$@"
