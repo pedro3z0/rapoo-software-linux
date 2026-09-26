@@ -1,6 +1,6 @@
 # Rapoo Linux
 
-Linux support for **Rapoo** gaming mice (primary target: **VT3 Air**,
+Linux support for **Rapoo** gaming mice (primary target: **VT0 Air Max**,
 dongle `24ae:14a1`) - a `udev` rule that unlocks Rapoo's **official web
 driver** on Linux, plus a reverse-engineered `rapoo` CLI for scripting,
 backups and diagnostics.
@@ -209,7 +209,4 @@ Troubleshooting:
 - `docs/ORIGINAL_ARTIFACT.md` - provenance and hashes of the reference driver
 
 ## License
-
 MIT - see [LICENSE](LICENSE).
-The extracted Rapoo payload is not covered by this license and is not
-distributed with this repository.
