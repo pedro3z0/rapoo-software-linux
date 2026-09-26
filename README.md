@@ -158,7 +158,4 @@ Troubleshooting:
 - `docs/ORIGINAL_ARTIFACT.md` - provenance and hashes of the reference driver
 
 ## License
-
-Code in this repository: to be decided (add a license before distributing).
-The extracted Rapoo payload is not covered by any license here and is not
-distributed with this repository.
+MIT
