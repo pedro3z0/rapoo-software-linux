@@ -14,6 +14,7 @@
 # Usage:
 #   ./install.sh          # normal install (udev rule + rapoo command)
 #   ./install.sh --dev    # + pytest dev environment
+#   ./install.sh --tui    # + build the Rust terminal UI (needs cargo)
 set -euo pipefail
 
 HERE="$(cd "$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")" && pwd)"
@@ -60,6 +61,18 @@ if [[ "${1:-}" == "--dev" ]]; then
         "$HERE/.venv/bin/pip" install -q pytest
     fi
     echo "       run tests: .venv/bin/python -m pytest backend/tests/"
+fi
+
+# Optional Rust TUI build (ratatui frontend; needs cargo)
+if [[ "${1:-}" == "--tui" ]] || [[ "${1:-}" == "--dev" ]]; then
+    if command -v cargo >/dev/null 2>&1; then
+        echo "[tui] Building Rust terminal UI (cargo build --release)..."
+        (cd "$HERE/tui" && cargo build --release --quiet) \
+            && echo "       done: rapoo tui  (or ./tui/target/release/rapoo-tui)" \
+            || echo "       cargo build failed - see 'cd tui && cargo build --release'" >&2
+    else
+        echo "[tui] cargo not found - skipping TUI build (install rustup first)" >&2
+    fi
 fi
 
 echo ""

@@ -298,6 +298,23 @@ def cmd_restore(args):
         return 1
 
 
+def cmd_tui(args):
+    """Launch the Rust ratatui frontend (subprocess bridge over this CLI)."""
+    import subprocess
+    tui_bin = REPO_ROOT / "tui" / "target" / "release" / "rapoo-tui"
+    tui_dbg = REPO_ROOT / "tui" / "target" / "debug" / "rapoo-tui"
+    exe = str(tui_bin if tui_bin.is_file() else tui_dbg)
+    if not (tui_bin.is_file() or tui_dbg.is_file()):
+        print(
+            "rapoo-tui not built yet. Build it with:\n"
+            "  cd tui && cargo build --release",
+            file=sys.stderr,
+        )
+        return 1
+    cmd = [exe, "--profile", str(args.profile), "--timeout", str(args.timeout)]
+    return subprocess.call(cmd)
+
+
 def main():
     parser = argparse.ArgumentParser(description="Rapoo Gaming Mouse Configuration Tool (Linux)")
     sub = parser.add_subparsers(dest="command", required=True)
@@ -372,6 +389,11 @@ def main():
     p_pair.add_argument("--dry-run", action="store_true", help="Show frame sequence without sending (default)")
     p_pair.add_argument("--confirm", action="store_true", help="Attempt live pairing (currently refused: wired fw NAKs it; use hub.rapoo.cn)")
 
+    # tui: Rust ratatui frontend
+    p_tui = sub.add_parser("tui", help="Launch terminal UI (Rust ratatui, bridge over this CLI)")
+    p_tui.add_argument("--profile", type=int, default=0, help="Profile index (0-7, default 0)")
+    p_tui.add_argument("--timeout", type=float, default=10.0, help="Status wait in seconds")
+
     args = parser.parse_args()
 
     handlers = {
@@ -382,7 +404,8 @@ def main():
         "set": cmd_set,
         "backup": cmd_backup,
         "restore": cmd_restore,
-        "pair": cmd_pair
+        "pair": cmd_pair,
+        "tui": cmd_tui,
     }
     sys.exit(handlers[args.command](args))
 

@@ -130,12 +130,32 @@ rapoo pair --query    # read-only dongle pairing state (live pairing is
                       # disabled on purpose; re-pair via hub.rapoo.cn)
 ```
 
+## Terminal UI (Rust, ratatui)
+
+A full TUI frontend lives in `tui/` (Rust, `ratatui` + `crossterm`,
+1.4MB release binary). It drives the same Python CLI as its backend
+(`--json` subprocess bridge), so there is zero protocol duplication.
+
+```bash
+cd tui && cargo build --release    # one-time build
+./rapoo tui                        # launch (same udev/permission rules)
+rapoo tui --profile 2              # after ./install.sh
+```
+
+Eight tabs — Dashboard / DPI / Performance / Sensor / Wireless /
+Power / Presets / Diag — cover every `get`+`set` flag plus live status,
+backup/restore, pair query and raw reads. Named custom presets
+(`~/.config/rapoo/presets/*.json`) save & re-apply full setting sets;
+every write asks `Apply? (y/n)` first. Keymap + numeric encodings:
+`docs/TUI.md`.
+
 ## Repository layout
 
 ```
 rapoo                        CLI launcher (symlinked to ~/.local/bin)
-install.sh                   udev rule + `rapoo` command (+ optional --dev)
-docs/                        PROTOCOL.md, DEVICES.md, ORIGINAL_ARTIFACT.md
+install.sh                   udev rule + `rapoo` command (+ optional --dev, --tui)
+tui/                         Rust ratatui terminal UI (cargo build --release)
+docs/                        PROTOCOL.md, TUI.md, DEVICES.md, ORIGINAL_ARTIFACT.md
 tools/                       IFW payload extractor, PE helpers, verifiers
 analysis/                    Local-only extracted payloads (git-ignored)
 analysis/manifests/          Committed manifests (device table, payload hashes)
@@ -205,6 +225,7 @@ Troubleshooting:
 
 - `docs/PROTOCOL.md` - full HID protocol spec + **numeric encodings**
   (polling codes, presets, LOD scales, RF values, status report layout)
+- `docs/TUI.md` - Rust terminal UI: build, keymap, EV/VV preset tables
 - `docs/DEVICES.md` - supported device matrix (100+ models)
 - `docs/ORIGINAL_ARTIFACT.md` - provenance and hashes of the reference driver
 

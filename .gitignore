@@ -34,3 +34,6 @@ Thumbs.db
 # It stays on disk as the read-only reference (hash-pinned in docs/ORIGINAL_ARTIFACT.md).
 A HUB_Game_Win_V1.0.19.exe
 A HUB_*.exe
+
+# Rust TUI build artifacts
+tui/target/
