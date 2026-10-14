@@ -106,6 +106,9 @@ rapoo set --key-scan 4000Hz           # key scan: 1000/2000/4000/8000 Hz
 rapoo set --lod 1.1                   # lift-off distance in mm (model scale)
 rapoo set --angle -3                  # sensor angle -30..+30 degrees
 rapoo set --motion-sync on --glass off
+rapoo set --linear-correction off     # trajectory corrections (angle snap)
+rapoo set --ripple-correction off
+rapoo set --debounce-press 0 --debounce-release 0  # key debounce, 0-32 ms each
 
 # Wireless / RF
 rapoo set --rf-boost maximum          # RF strategy: adaptive | maximum
@@ -144,10 +147,9 @@ rapoo tui --profile 2              # after ./install.sh
 
 Eight tabs — Dashboard / DPI / Performance / Sensor / Wireless /
 Power / Presets / Diag — cover every `get`+`set` flag plus live status,
-backup/restore, pair query and raw reads. Named custom presets
-(`~/.config/rapoo/presets/*.json`) save & re-apply full setting sets;
-every write asks `Apply? (y/n)` first. Keymap + numeric encodings:
-`docs/TUI.md`.
+backup/restore, pair query and raw reads. Edits apply instantly
+(`←/→` cycle, `Enter` exact); only preset-apply and restore confirm.
+Keymap + numeric encodings: `docs/TUI.md`.
 
 ## Repository layout
 

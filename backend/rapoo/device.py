@@ -106,6 +106,7 @@ class MouseSettings:
     liftoff_index: int
     liftoff_label: str
     liftoff_scale: List[float]
+    sensor_scan_label: str = ""
 
 
 class RapooMouse:
@@ -366,6 +367,7 @@ class RapooMouse:
             liftoff_index=lod_index,
             liftoff_label=liftoff_label,
             liftoff_scale=scale,
+            sensor_scan_label=self.model.sensor_scan_label if self.model else "",
         )
 
     def set_dpi_stage(self, stage_index: int, profile: int = 0):
@@ -408,9 +410,37 @@ class RapooMouse:
         val = int(angle).to_bytes(1, byteorder="little", signed=True)
         self.write_memory(OFFSET_MOUSE_SENSORANGLE, val, profile)
 
-    def set_corrections(self, linear: bool, ripple: bool, profile: int = 0):
+    def set_corrections(self, linear: bool | None = None, ripple: bool | None = None, profile: int = 0):
+        """Toggle trajectory corrections at offset 707 (bit0 linear, bit1 ripple).
+
+        Passing None for one of the two keeps its current value (single
+        read of the current byte first).
+        """
+        if linear is None or ripple is None:
+            cur = self.read_memory(OFFSET_MOUSE_LINEAR_RIPPLE, 1, profile)[0]
+            if linear is None:
+                linear = bool(cur & 0x01)
+            if ripple is None:
+                ripple = bool(cur & 0x02)
         val = (1 if linear else 0) | ((1 if ripple else 0) << 1)
         self.write_memory(OFFSET_MOUSE_LINEAR_RIPPLE, [val], profile)
+
+    def set_debounce(self, press_ms: int | None = None, release_ms: int | None = None, profile: int = 0):
+        """Set key debounce (press at offset 704, release at 705), both 0-32 ms.
+
+        Passing None for one of the two keeps its current value (single
+        2-byte read first). Range validated against the official UI.
+        """
+        for name, value in (("press", press_ms), ("release", release_ms)):
+            if value is not None and not (0 <= int(value) <= 32):
+                raise ValueError(f"Debounce {name} must be 0-32 ms, got {value}")
+        if press_ms is None or release_ms is None:
+            blk = self.read_memory(OFFSET_MOUSE_DOWNDELAY, 2, profile)
+            if press_ms is None:
+                press_ms = blk[0]
+            if release_ms is None:
+                release_ms = blk[1] if len(blk) > 1 else blk[0]
+        self.write_memory(OFFSET_MOUSE_DOWNDELAY, [int(press_ms), int(release_ms)], profile)
 
     def _resolve_polling(self, polling_rate: int | str | None, profile: int) -> int:
         """Resolves a polling rate (raw code or label) to its raw code,
@@ -442,7 +472,10 @@ class RapooMouse:
         """
         if isinstance(preset, str):
             name = preset.strip().lower()
-            matches = [v for v, n in SENSOR_MODE_VALUES.items() if n == name]
+            # Compare case-insensitively: the table stores mixed-case
+            # names (hyperCore), so lowercasing only the input made
+            # 'hyperCore' unmatchable while 'frenzy'/'office' worked.
+            matches = [v for v, n in SENSOR_MODE_VALUES.items() if n.lower() == name]
             if not matches:
                 raise ValueError(
                     f"Unknown preset '{preset}'. Choose from: "

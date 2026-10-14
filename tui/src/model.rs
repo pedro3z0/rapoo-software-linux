@@ -34,6 +34,8 @@ pub struct Settings {
     pub dc_switch: bool,
     pub lod_index: u8,
     pub lod_label: String,
+    pub sensor_scan_label: String,
+    pub liftoff_scale: Vec<f32>,
 }
 
 impl Settings {
@@ -80,6 +82,12 @@ impl Settings {
             dc_switch: gb("dc_switch_enabled"),
             lod_index: gi("liftoff_index") as u8,
             lod_label: gs("liftoff_label"),
+            sensor_scan_label: gs("sensor_scan_label"),
+            liftoff_scale: v
+                .get("liftoff_scale")
+                .and_then(|a| a.as_array())
+                .map(|a| a.iter().filter_map(|x| x.as_f64().map(|f| f as f32)).collect())
+                .unwrap_or_default(),
             ..Default::default()
         }
     }
@@ -146,6 +154,13 @@ pub fn check_lod_index(i: i64) -> Result<()> {
         Ok(())
     } else {
         Err(anyhow!("LOD index must be 1-11"))
+    }
+}
+pub fn check_debounce(v: i64) -> Result<()> {
+    if (0..=32).contains(&v) {
+        Ok(())
+    } else {
+        Err(anyhow!("Debounce must be 0-32 ms, got {v}"))
     }
 }
 

@@ -260,6 +260,24 @@ def cmd_set(args):
                 mouse.set_dc_switch(enable, args.profile)
                 print(f"Set DC switch to {enable}")
 
+            if args.linear_correction is not None:
+                enable = args.linear_correction.lower() in ("true", "1", "yes", "on")
+                mouse.set_corrections(linear=enable, profile=args.profile)
+                print(f"Set linear correction to {enable}")
+
+            if args.ripple_correction is not None:
+                enable = args.ripple_correction.lower() in ("true", "1", "yes", "on")
+                mouse.set_corrections(ripple=enable, profile=args.profile)
+                print(f"Set ripple correction to {enable}")
+
+            if args.debounce_press is not None:
+                mouse.set_debounce(press_ms=args.debounce_press, profile=args.profile)
+                print(f"Set press debounce to {args.debounce_press} ms")
+
+            if args.debounce_release is not None:
+                mouse.set_debounce(release_ms=args.debounce_release, profile=args.profile)
+                print(f"Set release debounce to {args.debounce_release} ms")
+
         return 0
     except PermissionError:
         print("Permission denied opening hidraw device. Run with sudo or install udev rules.", file=sys.stderr)
@@ -373,6 +391,10 @@ def main():
         "--low-battery-light", choices=["on", "off", "true", "false"], help="Low-battery LED flash alert"
     )
     p_set.add_argument("--dc-switch", choices=["on", "off", "true", "false"], help="DC switch (undocumented)")
+    p_set.add_argument("--linear-correction", choices=["on", "off", "true", "false"], help="Trajectory linear correction (angle snapping)")
+    p_set.add_argument("--ripple-correction", choices=["on", "off", "true", "false"], help="Trajectory ripple correction")
+    p_set.add_argument("--debounce-press", type=int, help="Key press debounce (0-32 ms)")
+    p_set.add_argument("--debounce-release", type=int, help="Key release debounce (0-32 ms)")
 
     # backup & restore
     p_bak = sub.add_parser("backup", help="Save current settings to a JSON file")

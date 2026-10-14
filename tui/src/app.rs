@@ -1,4 +1,5 @@
-//! App state: tabs, selection, cached settings/status, edit + confirm flows.
+//! App state: tabs, modes, cached device state.
+//! Row/Field live in rows.rs (presentation+action mapping).
 
 use crate::bridge::Bridge;
 use crate::model::Settings;
@@ -16,26 +17,27 @@ impl Tab {
     ];
     pub fn title(self) -> &'static str {
         match self {
-            Tab::Dashboard => "1 Dashboard",
-            Tab::Dpi => "2 DPI",
-            Tab::Performance => "3 Performance",
-            Tab::Sensor => "4 Sensor",
-            Tab::Wireless => "5 Wireless",
-            Tab::Power => "6 Power",
-            Tab::Presets => "7 Presets",
-            Tab::Diag => "8 Diag",
+            Tab::Dashboard => "Dashboard",
+            Tab::Dpi => "DPI",
+            Tab::Performance => "Performance",
+            Tab::Sensor => "Sensor",
+            Tab::Wireless => "Wireless",
+            Tab::Power => "Power",
+            Tab::Presets => "Presets",
+            Tab::Diag => "Diagnostics",
         }
     }
-    pub fn rows(self, app: &App) -> usize {
+    /// Key hints shown in the content block title (reference style).
+    pub fn hints(self) -> &'static str {
         match self {
-            Tab::Dashboard => 6,
-            Tab::Dpi => 9,
-            Tab::Performance => 5,
-            Tab::Sensor => 7,
-            Tab::Wireless => 3,
-            Tab::Power => 4,
-            Tab::Presets => app.presets.len().max(1) + 2,
-            Tab::Diag => 5,
+            Tab::Dashboard => "R: refresh",
+            Tab::Dpi => "Enter: edit value, s: switch stage",
+            Tab::Performance => "Enter: edit, <-/->: cycle",
+            Tab::Sensor => "Enter: edit, <-/->: cycle, Space: toggle",
+            Tab::Wireless => "Enter: edit, <-/->: cycle, Space: toggle",
+            Tab::Power => "Enter: edit, <-/->: cycle, Space: toggle",
+            Tab::Presets => "Enter: apply preset, p: save snapshot, b: backup, X: restore",
+            Tab::Diag => "Enter: run row, w: raw read",
         }
     }
 }
@@ -43,18 +45,16 @@ impl Tab {
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub enum Mode {
     Normal,
-    Editing { field: String, value: String },
+    Editing { field: String, value: String, label: String },
     Confirm { message: String, action: PendingAction },
     Message { text: String },
+    Help,
 }
 
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub enum PendingAction {
-    Set(Vec<String>),
-    Backup(String),
     Restore(String),
     ApplyPreset(usize),
-    Quit,
 }
 
 pub struct App {
@@ -79,10 +79,12 @@ impl App {
             settings: None, status: None, list_text: String::new(),
             last_error: None, last_ok: None, presets, log: vec![], should_quit: false }
     }
+
     pub fn push_log(&mut self, s: impl Into<String>) {
         self.log.push(s.into());
         if self.log.len() > 200 { self.log.remove(0); }
     }
+
     pub fn refresh_all(&mut self) {
         self.last_error = None;
         self.last_ok = None;
@@ -100,6 +102,21 @@ impl App {
         }
         self.presets = crate::presets::list_presets();
     }
+
+    /// Fast refresh after an edit: settings only (no ~3s status wait).
+    pub fn refresh_settings(&mut self) {
+        self.last_error = None;
+        match self.bridge.list_text() {
+            Ok(t) => self.list_text = t,
+            Err(e) => { self.last_error = Some(format!("list: {e:#}")); }
+        }
+        match self.bridge.get() {
+            Ok(v) => { self.settings = Some(Settings::from_json(&v)); }
+            Err(e) => { self.last_error = Some(format!("get: {e:#}")); }
+        }
+        self.presets = crate::presets::list_presets();
+    }
+
     pub fn next_tab(&mut self) {
         let i = Tab::ALL.iter().position(|t| *t == self.tab).unwrap_or(0);
         self.tab = Tab::ALL[(i + 1) % Tab::ALL.len()];
@@ -114,7 +131,10 @@ impl App {
         if n < Tab::ALL.len() { self.tab = Tab::ALL[n]; self.cursor = 0; }
     }
     pub fn move_cursor(&mut self, delta: i32) {
-        let n = self.tab.rows(self).max(1) as i32;
+        let n = crate::rows::rows(self).len().max(1) as i32;
         self.cursor = (self.cursor as i32 + delta).rem_euclid(n) as usize;
+    }
+    pub fn row_at(&self, i: usize) -> Option<crate::rows::Row> {
+        crate::rows::rows(self).into_iter().nth(i)
     }
 }

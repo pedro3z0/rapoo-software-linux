@@ -170,7 +170,20 @@ table; this covers VT0 Air MAX / VT3 Air and 65 other models):
 
 Official UI copies: frenzy = ">= 20K engine rate", competitive = full-speed
 racing, hyperCore = esports microsecond response, firepower = gaming,
-balanced = low power, office = daily use.
+balanced = low power, office = daily use. The competitive copy carries the
+`{scanRate}` placeholder which the driver fills with the model's
+`sensorScanRateLabel` (e.g. ">= 13KFPS engine scan rate").
+
+#### sensorScanRateLabel (per-model engine scan class)
+
+The official driver device table declares `sensorScanRateLabel` per model
+(`"13K"` or `"10K"`). Extracted for **80 models / 152 PIDs** (both wired
+and dongle PIDs; VT0 Air MAX = `13K`); models without the capability
+(keyboards, legacy paw3311 tier, VT1/VT7 SE) have no label and the UI
+falls back to the plain power-class copy. Stored in
+`backend/rapoo/device_registry.py:SENSOR_SCAN_LABELS` (PID -> label),
+resolved per connected device and exposed as `sensor_scan_label` in
+`rapoo get --json`.
 
 Which presets are legal at which polling rate (official VV table):
 
@@ -286,6 +299,12 @@ model once verified live.
 - Linear/ripple byte (profile+707): bit0 = angle snapping, bit1 = ripple
   correction; motion sync (profile+645) and glass tracking (profile+709):
   0/1
+- Key debounce (profile+704 press, +705 release): 0..32 ms each, validated
+  by `set_debounce()`; either value may be set independently (the other is
+  read-preserved). CLI flags: `--linear-correction`, `--ripple-correction`,
+  `--debounce-press`, `--debounce-release`
+- Preset names are matched case-insensitively (`hyperCore`, `HYPERCORE`,
+  `hypercore` all resolve) — the table stores mixed-case names
 
 ### Live status report (input report ID 7, experimental)
 

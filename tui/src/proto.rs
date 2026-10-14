@@ -71,21 +71,50 @@ pub fn sensor_value(name: &str) -> Option<u8> {
     }
 }
 
-/// Official marketing copy per preset (bundle i18n + kQ subtitles).
-/// (title, excerpt, power_class)
+/// Official marketing copy per preset (WebHID driver i18n + kQ subtitles).
+/// (title, excerpt template, power class). The excerpt for `competitive`
+/// carries the official `{scanRate}` placeholder -> fill with the model's
+/// sensorScanRateLabel via `fill_scan_rate`.
 pub fn sensor_info(name: &str) -> (&'static str, &'static str, &'static str) {
     match name {
-        "frenzy" => ("Frenzy Gaming", "≥20K engine, ultra-fast scan", "Corded Gaming"),
-        "competitive" => (
-            "Gaming Hyper",
-            "≥{scanRate}KFPS engine scan rate",
+        "frenzy" => (
+            "Frenzy Gaming",
+            "≥20K engine speed · ultra-fast scanning",
             "Corded Gaming",
         ),
-        "hyperCore" => ("Hyper Core", "Microsecond response", "Corded Gaming"),
-        "firepower" => ("Firepower", "Esports gaming", "High Performance"),
-        "balanced" => ("Balanced", "Gaming + low power", "Low Power"),
-        "office" => ("Office", "Daily use", "Office"),
+        "competitive" => (
+            "Gaming Hyper",
+            "≥{scanRate}KFPS engine scan rate · full-speed gaming",
+            "Corded Gaming",
+        ),
+        "hyperCore" => ("Hyper Core", "Hyper core esports, microsecond response", "Corded Gaming"),
+        "firepower" => ("Firepower", "Esports gaming, effortless control", "High Performance"),
+        "balanced" => ("Balanced", "Gaming entertainment, worry-free", "Low Power"),
+        "office" => ("Office", "Casual gaming, office-friendly", "Office"),
         _ => ("Unknown", "", ""),
+    }
+}
+
+/// Replace the official `{scanRate}` placeholder with the model's label
+/// (e.g. "13K"). Models without the capability fall back to the plain
+/// power-class description so no placeholder ever leaks into the UI.
+///
+/// Note: the English i18n template is "≥{scanRate}KFPS ..." while the
+/// Chinese source is "≥{scanRate}FPS ..." (label already carries the K).
+/// A doubled "KK" is collapsed so the UI shows "≥13KFPS", matching the
+/// authoritative Chinese format.
+pub fn fill_scan_rate(template: &str, label: &str) -> String {
+    if !template.contains("{scanRate}") {
+        return template.to_string();
+    }
+    if label.is_empty() {
+        return "full-speed gaming, all-out performance".to_string();
+    }
+    let filled = template.replace("{scanRate}", label);
+    if label.ends_with('K') {
+        filled.replace("KKFPS", "KFPS")
+    } else {
+        filled
     }
 }
 
@@ -143,5 +172,24 @@ mod tests {
             assert_eq!(polling_label(raw), label);
             assert_eq!(polling_raw(label), Some(raw));
         }
+    }
+}
+
+#[cfg(test)]
+mod scan_rate_tests {
+    use super::*;
+    #[test]
+    fn fills_scan_rate_placeholder() {
+        let (_, excerpt, _) = sensor_info("competitive");
+        assert_eq!(fill_scan_rate(excerpt, "13K"), "≥13KFPS engine scan rate · full-speed gaming");
+        assert_eq!(fill_scan_rate(excerpt, "10K"), "≥10KFPS engine scan rate · full-speed gaming");
+    }
+    #[test]
+    fn missing_label_falls_back_cleanly() {
+        let (_, excerpt, _) = sensor_info("competitive");
+        assert_eq!(fill_scan_rate(excerpt, ""), "full-speed gaming, all-out performance");
+        // no placeholder -> untouched
+        let (_, frenzy, _) = sensor_info("frenzy");
+        assert_eq!(fill_scan_rate(frenzy, ""), frenzy);
     }
 }

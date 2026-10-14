@@ -1,6 +1,7 @@
 mod actions;
 mod app;
 mod bridge;
+mod help;
 mod model;
 mod presets;
 mod proto;
